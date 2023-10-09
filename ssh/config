@@ -1,0 +1,13 @@
+# Personal acc - DEFAULT config for repos with `github.com` remote 
+Host github.com
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+
+
+# Work acc - for remote `github.com-work1`
+Host github.com-ArbinIndia-Hrutvik
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+
