@@ -1,0 +1,81 @@
+# [Created by task 2.6.2 1/23/2024 10:56:02]
+# Taskwarrior program configuration file.
+# For more documentation, see https://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# You can also refence environment variables:
+#   variable=$HOME/task
+#   variable=$VALUE
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=/home/hrutvik_/.task
+# Editor
+editor=nvim
+
+# To use the default location of the XDG directories,
+# move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
+
+#data.location=~/.local/share/task
+#hooks.location=~/.config/task/hooks
+
+# Color theme (uncomment one to use)
+#include light-16.theme
+#include light-256.theme
+#include dark-16.theme
+include dark-256.theme # uncomment for colors.. comment when running bugwarrior-pull
+color.blocking=bold black on red # uncomment for colors.. comment when running bugwarrior-pull
+color.blocked=bold white on blue # uncomment for colors.. comment when running bugwarrior-pull
+#include dark-red-256.theme
+#include dark-green-256.theme
+#include dark-blue-256.theme
+#include dark-violets-256.theme
+#include dark-yellow-green.theme
+#include dark-gray-256.theme
+#include dark-gray-blue-256.theme
+#include solarized-dark-256.theme
+#include solarized-light-256.theme
+#include no-color.theme
+
+report.cusone.description=First custom report for test
+report.cusone.columns=id,project,description.combined
+report.cusone.labels=ID,Proj,Desc
+report.cusone.sort=project+\/,entry+
+context.personal.read=project:Personal or +personal
+context.personal.write=project:Personal
+news.version=2.6.0
+context.ITT.read=project:ITT or project:ME
+context.ITT.write=project:ITT
+context.EOLWEB.read=project:EOLWEB
+context.EOLWEB.write=project:EOLWEB
+
+# Bugwarrior UDAs
+uda.jiraissuetype.type=string
+uda.jiraissuetype.label=Issue Type
+uda.jirasummary.type=string
+uda.jirasummary.label=Jira Summary
+uda.jiraurl.type=string
+uda.jiraurl.label=Jira URL
+uda.jiradescription.type=string
+uda.jiradescription.label=Jira Description
+uda.jiraid.type=string
+uda.jiraid.label=Jira Issue ID
+uda.jiraestimate.type=numeric
+uda.jiraestimate.label=Estimate
+uda.jirafixversion.type=string
+uda.jirafixversion.label=Fix Version
+uda.jiracreatedts.type=date
+uda.jiracreatedts.label=Created At
+uda.jirastatus.type=string
+uda.jirastatus.label=Jira Status
+uda.jirasubtasks.type=string
+uda.jirasubtasks.label=Jira Subtasks
+# # END Bugwarrior UDAs
+context.EOLWA.read=project:EOLWA
+context.EOLWA.write=project:EOLWA
