@@ -1,10 +1,21 @@
 
-format = """$jobs$directory$character"""
+format = """$jobs$directory$git_branch$git_commit$git_state$git_status$character"""
 
 right_format = """$all"""
+
+add_newline = false
 
 
 [git_commit]
 # commit_hash_length = 4
-tag_symbol = '🔖 '
+tag_symbol = ' 🔖'
 tag_disabled = false
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+windows_starship = "/mnt/c/Program Files/starship/bin/starship.exe"
+#  "C:\Program Files\starship\bin"
+
+[golang]
+symbol = ' '
+style = 'bold green'
